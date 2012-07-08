@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Twitch</title>
+		<style>
+			body {
+				font-family: Arial;
+				margin-left: 200px;
+				color: #333;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<h1><a href="#">jQuery Twitch</a></h1>
+		<p>Do some hoverin'.</p>
+		<h2><a class="fast" href="#">Fast twitch..</a></h2>
+		<h2><a class="slow" href="#">Slow twitch..</a></h2>
+		<h2><a class="wide" href="#">Wide twitch..</a></h2>
+		<h2><a class="ugly" href="#">Ugly twitch..</a></h2>
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="../jquery.twitch.js"></script>
+		<script>
+		$(function () {
+			$('a').click(function ( e ) { e.preventDefault(); });
+			$('h1 a').twitch();
+			$('a.fast').twitch({ speed : 10 });
+			$('a.slow').twitch({ speed : 130 });
+			$('a.ugly').twitch({ color1 : '#4583af', color2 : '#acf0e1' });
+			$('a.wide').twitch({
+				displacement : 10
+			});
+		});
+		</script>
+	</body>
+</html>

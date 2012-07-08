@@ -1,0 +1,8 @@
+{
+  "JAVASCRIPT" : {
+    "DIST_DIR" : "./",
+    "jquery.twitch" : [
+      "src/jquery.twitch.js"
+    ]
+  }
+}
